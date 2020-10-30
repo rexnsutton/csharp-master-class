@@ -1,12 +1,35 @@
 ﻿using System;
 
-namespace FirstConsoleApp
+namespace Classes
 {
-    class Program
+    public class Person
     {
-        static void Main(string[] args)
+        public string Name;
+
+        public void Introduce (string to)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hi {0}, I am {1}", to, Name);
+        }
+
+        public static Person Parse(string str)
+        {
+            var person = new Person();
+            person.Name = str;
+
+            return person;
+        }
+
+        public string name;
+
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                var person = Person.Parse("Rex");
+                person.Introduce("Mosh");
+
+                
+            }
         }
     }
 }
