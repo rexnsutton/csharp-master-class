@@ -1,35 +1,14 @@
 ﻿using System;
-
-namespace Classes
+namespace cSharpIntermediate
 {
-    public class Person
+   class Program
     {
-        public string Name;
 
-        public void Introduce (string to)
+        static void Main(string[] args)
         {
-            Console.WriteLine("Hi {0}, I am {1}", to, Name);
-        }
-
-        public static Person Parse(string str)
-        {
-            var person = new Person();
-            person.Name = str;
-
-            return person;
-        }
-
-        public string name;
-
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                var person = Person.Parse("Rex");
-                person.Introduce("Mosh");
-
-                
-            }
-        }
+            var customer = new Customer(1, "John");
+            Console.WriteLine(customer.Id);
+            Console.WriteLine(customer.Name);
+        }  
     }
 }
