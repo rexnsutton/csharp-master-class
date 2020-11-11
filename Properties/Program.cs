@@ -2,11 +2,17 @@
 
 namespace Properties
 {
-    class Program
+    public class Person
     {
-        static void Main(string[] args)
+        public DateTime Birthdate { get; set;
+        }
+
+        class Program
         {
-            Console.WriteLine("Hello World!");
+            static void Main(string[] args)
+            {
+                Console.WriteLine("Hello World!");
+            }
         }
     }
 }
